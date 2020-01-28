@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TRAIN SKED</title>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <!-- MOMENT js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script> 
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color:#52808e; color: white">
+            <h1 class="text-center">Train Schedule by JCB</h1>
+            <h4 class="text-center">Choo! Chug! Chuff! All Aboard!</h4>
+        </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary" style="background-color:#52808e; color: white">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center"><strong>CURRENT CHOO CHOO SCHEDULE</strong></h3>
+                </div>
+
+                <div class="panel-body">
+                    <table class="table table-hover" id="trainTable">
+                        <thead>
+                            <tr>
+                                <th>Name of Train</th>
+                                <th>Destination</th>
+                                <th>Next Arrival</th>
+                                <th>Frequency</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <!-- POPULATE WITH FIREBASE AND JQUERY -->
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div> 
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card card-default" style="background-color:#52808e; color: white">
+                <div class="card-header">
+                    <h5 class="panel-title text-center"><strong>ADD TRAIN</strong></h5>
+                </div>
+            <div class="card-body" style="background-color:#d8beed; color: black">
+                <form>
+                    <div class="form-group">
+                        <label for="">Name of Train</label>
+                        <input type="text" class="form-control" id="trainNameInput">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Destination</label>
+                        <input type="text" class="form-control" id="destinationInput">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">FIrst Train Time (HH:mm - MILITARY TIME)</label>
+                        <input type="text" class="form-control" id="firstTrainInput">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Frequency (Minutes)</label>
+                        <input type="text" class="form-control" id="frequencyInput">
+                    </div>
+
+                        <button type="submit" class=" btn btn-primary" style="background-color:#e0cf60; color:brown" id="addTrainBtn">Submit!</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="logic.js"></script>;
+
+</body>
+</html>
